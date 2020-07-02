@@ -17,6 +17,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3007;
 // console.log(process.env.KEY);
+app.get('/', (req, res) => {
+    res.send('Hello from API on Heroku!')
+});
+
 
 app.post('/weather',validateWeatherQueryParams, getWeather);
 
